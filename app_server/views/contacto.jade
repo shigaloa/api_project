@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    container-fluid.bg-grey
+      br
+      br
+      br
+      h2.text-center CONTACTO
+      br
+      br
+      .row
+        .col-sm-4
+          br 
+          p
+            span.glyphicon.glyphicon-map-marker  Sevilla, España
+          p
+            span.glyphicon.glyphicon-phone  + 034 609972644
+          p
+            span.glyphicon.glyphicon-envelope  shigaloa@gmail.com
+        .col-sm-8
+          form.form-horizontal(action="", method="post", role="form")
+            .row
+              .col-sm-6.form-group
+                input#nombre.form-control(name='nombre', placeholder='Nombre', type='text', required='')
+              .col-sm-6.form-group
+                input#email.form-control(name='email', placeholder='Email', type='text', required='')
+            .row  
+              textarea#comentar.form-control(name='comentario', placeholder='Comentario', rows='5')
+            br
+            .row
+              .col-sm-12.form-group
+                button.btn.btn-default.pull-right(type='submit') Enviar

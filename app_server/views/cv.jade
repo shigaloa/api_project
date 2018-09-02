@@ -1,0 +1,223 @@
+extends layout
+
+block content
+  container-fluid
+    .row
+    
+      link(type='text/css', rel='stylesheet', href='stylesheets/cv/blue.css')
+      link(type='text/css', rel='stylesheet', href='stylesheets/cv/print.css', media='print')
+      //if IE 7
+        link(href='stylesheets/cv/ie7.css', rel='stylesheet', type='text/css')
+      //if IE 6
+        link(href='stylesheets/cv/ie6.css', rel='stylesheet', type='text/css')
+      script(type='text/javascript', src='javascripts/cv/jquery-1.4.2.min.js')
+      script(type='text/javascript', src='javascripts/cv/jquery.tipsy.js')
+      //script(type='text/javascript', src='javascripts/cv/cufon.yui.js')
+      //script(type='text/javascript', src='javascripts/cv/scrollTo.js')
+      //script(type='text/javascript', src='javascripts/cv/myriad.js')
+      script(type='text/javascript', src='javascripts/cv/jquery.colorbox.js')
+      script(type='text/javascript', src='javascripts/cv/custom.js')
+      //script(type='text/javascript').
+        Cufon.replace('h1,h2');
+      // Contenedor
+      #wrapper
+      .wrapper-top
+      .wrapper-mid
+        // Papel
+        #paper
+          .paper-top
+          #paper-mid
+            .entry
+              // Foto
+              img.portrait(src='images/foto.jpg', alt='Francisco López')
+              // Fin Foto
+              // Información Personal
+              .self
+                h1.name
+                  | Francisco Lopez Flores
+                  br
+                  span Interactive Designer
+                ul
+                  li.ad Avd. Menéndez Pelayo nº52 – 4ºC
+                  li.ad 41003 Sevilla (España)
+                  li.mail shigaloa@gmail.com
+                  li.tel +34 609 97 26 44
+              // Fin Información Personal
+              // Social
+              .social
+                ul
+                  li
+                    a.north(href='javascript:window.print()', title='Print')
+                      img(src='images/icn-print.jpg', alt='')
+                  li
+                    a.north(href='/contacto', title='Contactar')
+                      img(src='images/icn-contact.jpg', alt='')
+                  li
+                    a.north(href="http://www.linkedin.com/in/francisco-lópez-flores-223aa0106", title='My Linkedin Profile', target="_blank")
+                      img(src='images/linkedin.png', alt='')
+              // Fin Social
+            // Linea 1
+            .entry
+              h2 OBJECTIVE
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim viverra nibh sed varius. Proin bibendum nunc in sem ultrices posuere. Aliquam ut aliquam lacus.
+            // Fin Linea 1
+            // Linea 2
+            .entry
+              h2 EDUCACION
+              .content
+                h3 1994
+                p
+                  | Facultad de Informática y Estadística. Universidad de Sevilla (España)
+                  br
+                  em Licenciatura en Informática. Sistemas Físicos.
+              .content
+                h3 2016
+                p
+                  | Euroinnova Business School 
+                  br
+                  em Master en Gestión y Dirección de Proyectos Informáticos: IT Project Management
+              .content
+                h3 2017
+                p
+                  | Oracle University
+                  br
+                  em Oracle Database 12c: OCA  Oracle Certified Associate
+              .content
+                h3 2009
+                p
+                  | Centro Universitario de La Salle
+                  br
+                  em Experto en Gestión del Sistema de Calidad. Normas ISO 9001
+            // Fin Linea 2
+            // Linea 3
+            .entry
+              h2 EXPERIENCIA
+              .content
+                h3 Mayo 2017-Enero 2018
+                p
+                  | Ayuntamiento de Sevilla
+                  br
+                  em Desarrollador informático
+                ul.info
+                  li
+                    | Gestión de contenidos de diversos servicios del Ayuntamiento de Sevilla en su portal principal www.sevilla.org, mediante el gestor PLONE 5.
+                  li Implantación de códigos QR para la página web del Ayuntamiento, JavaScript,….
+              .content
+                h3 Mayo 1995 – Septiembre 2016
+                p
+                  | Dherfor S.C. Grupo Inforper, Dos Hermanas, Sevilla (España)
+                  br
+                p
+                  | Los Palacios Formación. Grupo Inforper, Los Palacios y Villafranca, Sevilla (España)
+                  br
+                  em Gestor de Proyectos y Administrador departamento informática
+                ul.info
+                  li
+                    | Instalación y administración del portal de formación con las herramientas LCMS DOKEOS y MOODLE: gestión de contenidos, administración y seguimiento de usuarios y cursos. Optimización del portal con MySQL y PHP.
+                  li Web de empresa realizado con la herramienta JOOMLA.
+                  li Diseño de cursos de programación: C, videojuegos (C#, Unity)...
+                  li
+                    | Licitación de Cursos con las Administraciones: búsqueda, presentación de pliegos, seguimiento.
+                  li
+                    | Responsable del Sistema de Calidad para la norma ISO 9001 y del Plan de Prevención de Riesgos Laborales.
+                  li
+                    | Instalación y mantenimiento del sistema informático: aulas y oficinas de la empresa.
+              .content
+                h3 Noviembre 2012 – Julio 2015
+                p
+                  | NewLanguageInstitute, Sevilla  (España)
+                  br
+                  em Dirección
+                ul.info
+                  li Dirección.
+                  li Diseño de la web de la empresa.
+                  li Implantación y gestión del sistema de bases de datos.
+            // Fin Linea 3
+            // Linea 4
+            .entry
+              h2 WEB DEVELOPMENT
+              br
+              br
+              .content
+                h3 Front End
+                ul.skills
+                  li HTML
+                  li CSS
+                  li JavaScript
+                  li JQuery
+                  li AngularJs
+                  li ...
+              .content
+                h3 Back End
+                ul.skills
+                  li PHP
+                  li JavaScript
+                  li NodeJs
+                  li Ajax
+                  li Prototype
+                  li ...
+              .content
+                h3 CMS
+                ul.skills
+                  li Joomla
+                  li Dokeos
+                  li Moodle
+                  li WordPress
+                  li ...
+              br
+              br
+              h2 DEVELOPMENT
+              br
+              .content
+                h3 Data Base
+                ul.skills
+                  li Oracle
+                  li MySQL
+                  li MongoDb
+                  li SQL
+                  li PL/SQL
+                  li ...
+              .content
+                h3 Languages
+                ul.skills
+                  li C
+                  li C++
+                  li C#
+                  li Java
+                  li Cobol
+                  li ...
+            // Fin Linea 4
+            // Linea 5
+            .entry
+              h2 TRABAJOS
+              ul.works
+                li
+                  a(href='images/1.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/2.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/3.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/1.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/2.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/3.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/1.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+                li
+                  a(href='images/1.jpg', rel='gallery', title='Lorem ipsum dolor sit amet.')
+                    img(src='images/image.jpg', alt='')
+            // Fin Linea 5
+          .clear
+          .paper-bottom
+        // Fin Papel
+    // Fin Contenedor

@@ -1,0 +1,320 @@
+doctype html
+html(lang='es')
+  head
+    title Tema Company
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='company.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+  body#myPage(data-spy='scroll', data-target='.navbar', data-offset='60')
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') Logo
+        #myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#about') SOBRE NOSOTROS
+            li
+              a(href='#services') SERVICIOS
+            li
+              a(href='#portfolio') PORTFOLIO
+            li
+              a(href='#pricing') TARIFAS
+            li
+              a(href='#contact') CONTACTO
+    .jumbotron.text-center
+      h1 Compañía
+      p Especialidad en papaliñá
+      form.form-inline
+        .input-group
+          input.form-control(type='email', size='50', placeholder='Email address', required='')
+          .input-group-btn
+            button.btn.btn-danger Subscribirse
+    #about.container-fluid
+      .row
+        .col-sm-8
+          h2 Sobre la compañía
+          h4
+            | Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque consequuntur excepturi numquam deleniti adipisci
+            | doloribus assumenda ut quia, similique quas expedita officiis eos quibusdam magnam reprehenderit minus
+            | non soluta esse.
+          p
+            | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati ea fugiat deleniti itaque repellendus
+            | enim minus inventore, praesentium excepturi magni voluptatibus natus possimus, maxime rerum laborum in
+            | vel, a porro?
+          button.btn.btn-default.btn-lg(type='button') Mantenerte en contacto
+        .col-sm-4
+          span.glyphicon.glyphicon-signal.logo
+    .container-fluid.bg-grey
+      .row
+        .col-sm-4
+          span.glyphicon.glyphicon-globe.logo.slideanim
+        .col-sm-8
+          h2 Nuestros valores
+          h4
+            strong MISIÓN:
+            |  Nuestra misión Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam officiis
+            |                     ratione dolorum autem aliquid! Ad vitae commodi odio esse eos cumque maxime fugiat quidem possimus atque,
+            |                     dignissimos consectetur fuga! Illum.
+          p
+            strong VISIÓN:
+            |  Nuestra visión Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci alias
+            |                     maxime eaque aspernatur eos ipsam sequi id quaerat vitae sunt, vero cum sed molestiae eum enim dolor
+            |                     accusantium reiciendis iusto?
+    #services.container-fluid.text-center
+      h2 SERVICIOS
+      h4 Qué ofrecemos
+      br
+      .row.slideanim
+        .col-sm-4
+          span.glyphicon.glyphicon-off.logo-small
+          h4 PODER
+          p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum modi iure ab placeat tenetur nobis,
+            | eum aliquid minima minus? Accusantium quibusdam nulla repellendus dolores exercitationem esse corrupti
+            | quidem odio?
+        .col-sm-4
+          span.glyphicon.glyphicon-heart.logo-small
+          h4 AMOR
+          p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum modi iure ab placeat tenetur nobis,
+            | eum aliquid minima minus? Accusantium quibusdam nulla repellendus dolores exercitationem esse corrupti
+            | quidem odio?
+        .col-sm-4
+          span.glyphicon.glyphicon-lock.logo-small
+          h4 TRABAJOS REALIZADOS
+          p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum modi iure ab placeat tenetur nobis,
+            | eum aliquid minima minus? Accusantium quibusdam nulla repellendus dolores exercitationem esse corrupti
+            | quidem odio?
+      .row.slideanim
+        .col-sm-4
+          span.glyphicon.glyphicon-leaf.logo-small
+          h4 ECOLÓGICO
+          p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum modi iure ab placeat tenetur nobis,
+            | eum aliquid minima minus? Accusantium quibusdam nulla repellendus dolores exercitationem esse corrupti
+            | quidem odio?
+        .col-sm-4
+          span.glyphicon.glyphicon-certificate.logo-small
+          h4 CERTIFICADO
+          p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum modi iure ab placeat tenetur nobis,
+            | eum aliquid minima minus? Accusantium quibusdam nulla repellendus dolores exercitationem esse corrupti
+            | quidem odio?
+        .col-sm-4
+          span.glyphicon.glyphicon-wrench.logo-small
+          h4 TRABAJO DURO
+          p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum modi iure ab placeat tenetur nobis,
+            | eum aliquid minima minus? Accusantium quibusdam nulla repellendus dolores exercitationem esse corrupti
+            | quidem odio?
+    #portfolio.container-fluid.text-center.bg-grey
+      h2 PORTFOLIO
+      h4 Qué hemos creado
+      .row.text-center
+        .col-sm-4
+          .thumbnail
+            img(src='paris.jpg', alt='París')
+            p
+              strong París
+            p Si, construimos en París
+        .col-sm-4
+          .thumbnail
+            img(src='newyork.jpg', alt='Nueva York')
+            p
+              strong Nueva York
+            p Construimos en Nueva York
+        .col-sm-4
+          .thumbnail
+            img(src='sanfran.jpg', alt='San Francisco')
+            p
+              strong San Francisco
+            p Si, San Francisco es nuestro
+    h2 Qué dicen nuestros clientes
+    #myCarousel.carousel.slide.text-center(data-ride='carousel')
+      // Indicadores
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Para los slides
+      .carousel-inner(role='listbox')
+        .item.active
+          h4
+            | "This company is the best. I am so happy with the result!"
+            br
+            span(style='font-style:normal;') Michael Roe, Vice President, Comment Box
+        .item
+          h4
+            | "One word... WOW!!"
+            br
+            span(style='font-style:normal;') John Doe, Salesman, Rep Inc
+        .item
+          h4
+            | "Could I... BE any more happy with this company?"
+            br
+            span(style='font-style:normal;') Chandler Bing, Actor, FriendsAlot
+      // Controles derecho e izquierdo
+      a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only Previo
+      a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only Siguiente
+    #pricing.container-fluid
+      .text-center
+        h2 Tarifas
+        h4 Escoge el plan que te convenga
+      .row
+        .col-sm-4
+          .panel.panel-default.text-center
+            .panel-heading
+              h1 Básico
+            .panel-body
+              p
+                strong 20
+                |  Lorem
+              p
+                strong 15
+                |  Ipsum
+              p
+                strong 5
+                |  Dolor
+              p
+                strong 2
+                |  Sit
+              p
+                strong Final
+                |  Amet
+            .panel-footer
+              h3 $19
+              h4 al mes
+              button.btn.btn-lg Entrar
+        .col-sm-4
+          .panel.panel-default.text-center
+            .panel-heading
+              h1 Pro
+            .panel-body
+              p
+                strong 50
+                |  Lorem
+              p
+                strong 25
+                |  Ipsum
+              p
+                strong 10
+                |  Dolor
+              p
+                strong 5
+                |  Sit
+              p
+                strong Final
+                |  Amet
+            .panel-footer
+              h3 $29
+              h4 al mes
+              button.btn.btn-lg Entrar
+        .col-sm-4
+          .panel.panel-default.text-center
+            .panel-heading
+              h1 Premium
+            .panel-body
+              p
+                strong 100
+                |  Lorem
+              p
+                strong 50
+                |  Ipsum
+              p
+                strong 25
+                |  Dolor
+              p
+                strong 10
+                |  Sit
+              p
+                strong Final
+                |  Amet
+            .panel-footer
+              h3 $49
+              h4 al mes
+              button.btn.btn-lg Entrar
+    #contact.container-fluid.bg-grey
+      h2.text-center CONTACTO
+      .row
+        .col-sm-5
+          p Contacta con nosotros y te llamamos en 24h
+          p
+            span.glyphicon.glyphicon-map-marker  Sevilla, Es
+          p
+            span.glyphicon.glyphicon-phone  +034 666666666
+          p
+            span.glyphicon.glyphicon-envelope  cc@gmail.com
+        .col-sm-7
+          .row
+            .col-sm-6.form-group
+              input#name.form-control(placeholder='Nombre', type='text', required='')
+            .col-sm-6.form-group
+              input#email.form-control(placeholder='Email', type='text', required='')
+          textarea#comments.form-control(name='comments', placeholder='Comentario', rows='5')
+          br
+          .row
+            .col-sm-12.form-group
+              button.btn.btn-default.pull-right(type='submit') Enviar
+    // Añadir Google Map
+    #googleMap(style='height:400px;width:100%')
+      script.
+        function myMap () {
+        var myCenter = new google.maps.LatLng(37.3828300, -5.9731700);
+        var mapProp = {center: myCenter, zoom: 12, scrollwheel: false, draggable: false, mapTypeId: google.maps.MapTypeId.ROADMAP};
+        var map = new google.maps.Map (document.getElementById ("googleMap"), mapProp);
+        var marker = new google.maps.Marker ({position: myCenter});
+        marker.setMap (map);
+        }
+      script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap')
+    footer.container-fluid.text-center
+      a(href='#myPage', title='Arriba')
+        span.glyphicon.glyphicon-chevron-up
+        p
+          | Realizado por 
+          a(href='https://www.w3schools.com', title='Visit w3schools') www.w3schools.com
+    script.
+      $(document).ready(function(){
+      // añade smooth scrolling a los enlaces de navbar y footer
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event){
+      // asegurarse que this.hash tiene un valor antes de machacar el comportamiento por defecto
+      if (this.hash !== "") {
+      // prevent default anchor click behavior
+      event.preventDefault();
+      // almacenar hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+      scrollTop: $(hash).offset().top
+      }, 900, function () {
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+      });
+      }
+      });
+      })
+    script.
+      $(window).scroll(function () {
+      $(".slideanim").each(function () {
+      var pos = $(this).offset().top;
+      var winTop = $(window).scrollTop();
+      if (pos < winTop + 600) {
+      $(this).addClass("slide");
+      }
+      });
+      });

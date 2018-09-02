@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .row.page-header
+    .col-lg-12
+      h1= cabecera
+      .row
+        .col-xs-12.col-md-6
+          form.form-horizontal(action="", method="post", role="form")
+            - if (error == "val")
+              .alert.alert-danger(role="alert") Se requieren todos los campos, inténtalo de nuevo
+            .form-group
+              label.col-xs-2.col-sm-2.control-label(for="nombre") Nombre
+              .col-xs-10.col-sm-10
+                input#name.form-control(name="nombre")
+            .form-group            
+              label.col-xs-10.col-sm-2.control-label(for="puntuacion") Puntuación
+              .col-xs-12.col-sm-2
+                select.form-cotrol.input-sm(name="puntuacion")
+                  option 5
+                  option 4
+                  option 3
+                  option 2
+                  option 1
+            .form-group  
+              label.col-sm-2.control-label(for="comentario") Comentario
+              .col-sm-10
+                textarea#revi.form-control(name="comentario", rows="5") 
+            button.btn.btn.default.pull-right Añadir
+            .col-xs-12.col-md-4

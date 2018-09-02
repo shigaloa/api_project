@@ -1,0 +1,92 @@
+include _includes/sharedHTMLfunctions
+
+extends layout
+
+block content
+      
+      #detalle.container-fluid
+      .text-center
+        h2= cabecera.titulo 
+        h4= cabecera.subtitulo
+      .row
+        .col-sm-6
+          .panel.panel-default.text-center
+            .panel-heading
+              h1= imagen.cabecera
+            .panel-body
+              p
+                strong= imagen.descripcion.linea1
+              p
+                strong= imagen.descripcion.linea2
+              form.form-horizontal(action="", method="post", role="form")
+                - if (error == "val")
+                  .alert.alert-danger(role="alert") Se requieren todos los campos, inténtalo de nuevo
+                script(src='/javascripts/nasa.js')
+                .form-group(style='display:block')           
+                  label.col-xs-10.col-sm-6.control-label(for="rover") Seleccionar rover
+                  .col-xs-12.col-sm-3
+                    select.form-control.input-sm(id='rover', onchange="manejarSelectores()", name="rover")
+                      option(selected="selected")=''
+                      each rover in rovers
+                        option(value=rover.abreviatura)= rover.nombre
+                    
+                .form-group(id='camara_set1', style='display:none')         
+                  label.col-xs-10.col-sm-6.control-label(for="camara_set1") Seleccionar cámara
+                  .col-xs-12.col-sm-5
+                    select.form-control.input-sm(name="camara_set1")
+                      option(selected="selected")=''
+                      each camara in camara_set1
+                        option(value=camara.abreviatura)=camara.nombre
+                
+                .form-group(id='camara_set2', style='display:none')         
+                  label.col-xs-10.col-sm-6.control-label(for="camara_set2") Seleccionar cámara
+                  .col-xs-12.col-sm-6
+                    select.form-control.input-sm(name="camara_set2")
+                      option(selected="selected")=''
+                      each camara in camara_set2
+                        option(value=camara.abreviatura)=camara.nombre
+                
+                .form-group(id='sol', style='display:none')          
+                  label.col-xs-10.col-sm-6.control-label(for="sol") Día marciano desde aterrizaje
+                  .col-xs-12.col-sm-3
+                      input(type='range', min='0', max='1000', value='0', step='1', name='sol' oninput="document.getElementById('dia_marciano').innerHTML = this.value")
+                      label#dia_marciano 0
+
+                button.btn.btn-lg.pull-right Enviar Nasa
+            hr(width="100%")
+            h3 Opiniones
+            each recomendacion in recomendaciones
+                  strong=recomendacion.autor
+                    |&nbsp;
+                    |&nbsp;
+                    +formatDate(recomendacion.creado)
+                  p=recomendacion.comentario
+                    |&nbsp;
+                    |&nbsp;
+                  p
+                    +escribirPuntuacion(recomendacion.puntuacion)
+            .panel-footer
+            
+              h3= imagen.pie
+              p Media:
+                |&nbsp;
+                +escribirPuntuacion(imagen.puntuacion)
+              
+              a.btn.btn-lg(href="/rest_api/#{rest_api}/recomendacion/nueva") Valorar
+        
+        .col-sm-6
+          .panel.panel-default.text-center
+            .panel-heading
+              h1= formulario.cabecera 
+            .panel-body
+              div
+                img.center-block(src=formulario.descripcion.linea1, alt='', width='400', height='300')
+              BR
+              p
+                strong= formulario.descripcion.linea2
+            .panel-footer
+              h3= formulario.pie
+              
+              a.btn.btn-lg(href="/") Volver
+
+script(src='/javascripts/aragon.js')

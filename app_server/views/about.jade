@@ -1,0 +1,75 @@
+extends layout
+
+block content
+    #about.container-fluid
+      .row
+        .col-sm-8.text-justify
+          br
+          h2= cabecera
+          br
+          h4 Con esta  aplicación se pretende crear y configurar un proyecto MEAN (MongoDb, Express, AngularJs y NodeJs). Esta aplicación realiza consultas web a APIs públicas: en este caso hemos elegido tres: 
+          h4
+            ul
+              li 
+                |Base de datos de difusión del
+                |&nbsp;  
+                strong Instituto Nacional de Estadística
+                |: Tempus3.
+              li 
+                strong Aragón Open Data
+                |, que es el portal de datos abiertos del Gobierno de Aragón.
+              li 
+                strong NASA API portal
+                |. Su objetivo es poner su contenido, incluido imágenes, accesible principalmente a desarrolladores de aplicaciones.
+          h4 Además se crea una API propia para que los usuarios de esta aplicación puedan valorar cada una las APIs públicas.
+          h4 En este punto he de señalar que el orincipal propósito de la creación de esta aplicación es el de probar distintos aspectos de desarrollo por lo que existen distintas alternativas que pueden ser más óptimas, sobre todo en tiempo de respuesta.
+          h4 Se comienza construyendo un sitio estático, creando la aplicación en NodeJs y Express, usándolo como nuestro punto de partida en la pila MEAN.
+          h4 Continuamos creando la base de datos y diseñando el modelo de datos. Esta base de datos contiene datos generales para utilizarlos en las llamadas a las APIs externas públicas, además de contener las valoraciones de los usuarios que usan nuestra API interna. En la pila MEAN usaremos MongoDB para este paso, apoyándonos en Mongoose para el modelado de datos.
+          h4 Creamos una API REST para que podamos interactuar con estos datos a través de hacer llamadas web. En la pila MEAN este paso se realiza principalmente en Node.js y Express, con ayuda de Mongoose.
+          h4 La aplicación estática se actualiza para usar la API REST para interactuar con la base de datos creada y las APIs públicas. Usaremos Express y Node.js para ello.
+          h4 Tenemos una aplicación Express y Node.js. con la siguiente arquitectura:
+          div
+            img.img-responsive(src='/images/api_project.jpg', alt='')
+          br
+          br
+          h4 Cuando hablo de desarrollo de pila completa, realmente estoy hablando de desarrollar todas las partes de un sitio web o aplicación. La pila completa comienza con la base de datos y la web, el servidor en el Back-End, la lógica de aplicación y control en el medio, y  todo el camino hasta la interfaz de usuario en el Front-End.
+          h4 La pila se compone de cuatro tecnologías principales, con un elenco de soporte de tecnologías:
+          h4
+            ul
+              li 
+                strong Express
+                |, el framework web
+              li 
+                strong MongoDB
+                |, la base de datos
+              li 
+                strong Twitter Bootstrap
+                |, el framework de front-end
+              li 
+                strong Node.js
+                |, el servidor web
+          h4
+            strong Node.js
+            |&nbsp;
+            |es una plataforma de software, codificada  en JavaScript que te permite crear tu propio servidor web y construir aplicaciones web encima de él. Node.js no es en sí mismo un servidor web, ni es un lenguaje. Contiene una biblioteca de servidor HTTP integrada, lo que significa que no es necesario ejecutar un programa de servidor web separado, como Apache.
+          h4 
+            strong Express 
+            |&nbsp;
+            |resuelve la dificultad de Node.js para tener un sitio web básico en funcionamiento configurando un servidor web para escuchar la entrada, solicitar y devolver respuestas. Además, también define una estructura de directorio y una interfaz realmente simple para dirigir una URL entrante a un determinado fragmento de código, como servir a una página HTML estática, leer o escribir en una base de datos.
+          h4 
+            strong MongoDB 
+            |&nbsp;
+            |es una base de datos de documentos. El concepto de filas todavía existe pero en lugar de una columna define qué debe estar en la fila, un documento, y este documento define y contiene los datos en sí. MongoDB almacena documentos como BSON, que es JSON binario.
+          h4 
+            strong Twitter Bootstrap 
+            |&nbsp;
+            |lo utilizamos para crear un diseño responsive. Es un marco de Front-end que proporciona una gran ayuda para crear una interfaz de usuario. Entre sus características, Bootstrap proporciona un sistema de rejilla sensible, con estilos predeterminados para muchos componentes de la interfaz y la capacidad de cambiar la apariencia con temas. 
+          h4= contenido1
+          p= contenido2 
+          a.btn.btn-default.btn-lg(type='button' href="/contacto") Contactar
+        .col-sm-4.text-center
+          br
+          br
+          br
+          br
+          span.glyphicon.glyphicon-signal.logo

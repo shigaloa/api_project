@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= titulo
+    
+    script(src='/javascripts/jquery-3.3.1.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+        
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css') 
+    link(rel='stylesheet', href='/stylesheets/api_project.css')
+
+    link(href='https://fonts.googleapis.com/css?family=Montserrat', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet', type='text/css')
+    
+    script(src="https://www.gstatic.com/charts/loader.js")
+    
+  body#arriba(data-spy='scroll', data-target='.navbar', data-offset='60')
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#arriba') DESARROLLO NODEJS EXPRESS
+        #myNavbar.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/') INICIO
+            li
+              a(href='/about') SOBRE LA WEB
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown', href='#') APIS
+                span.caret
+              ul.dropdown-menu
+                each api in listaApis
+                  li
+                    a(href="/rest_api/#{api._id}") #{api.nombre}
+            li
+              a(href='/cv') CURRICULUM
+            li
+              a(href='/contacto') CONTACTO
+    .container
+      block content
+    
+    footer.container-fluid.text-center
+      a(href='#arriba', title='Arriba')
+        span.glyphicon.glyphicon-chevron-up
+        p.small 
+          strong Realizado por 
+            a(href='/contacto', title='Enviar email') Francisco López Flores  2018
+

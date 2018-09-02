@@ -1,0 +1,23 @@
+extends layout
+
+block content
+      script(src='/javascripts/dibuja-chart.js')
+      #detalle.container-fluid
+      .text-center
+        h2= cabecera.subtitulo 
+        h4= cabecera.subtitulo
+      .row
+        .col-sm-12
+          .panel.panel-default.text-center
+            .panel-heading
+              h1= cabecera.titulo
+            .panel-body
+              #grafico_lineal
+              p
+                
+              p
+            .panel-footer
+              h3 
+              
+              a.button.btn.btn-lg(href=href="/rest_api/#{rest_apiid}") Volver
+

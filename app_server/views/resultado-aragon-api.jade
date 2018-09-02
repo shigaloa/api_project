@@ -1,0 +1,45 @@
+include _includes/sharedHTMLfunctions
+
+extends layout
+
+block content
+      #detalle.container-fluid
+      .text-center
+        h2= cabecera.subtitulo 
+        h4= cabecera.subtitulo
+      .row
+        .col-sm-12
+          .panel.panel-default.text-center
+            .panel-heading
+              h1= cabecera.titulo
+            .panel-body
+              p
+                
+              table.table.table-bordered.table-hover
+                thead
+                  tr
+                    th.text-center Descripción
+                    th.text-center URL
+                    th.text-center Autor
+                    th.text-center Fuente
+                    th.text-center Ir
+                tbody
+                  each resultado in resultados
+                    tr
+                      td
+                        +limitaCadena(resultado.description)
+                      td
+                        <!--a(href="#{resultado.url}") #{resultado.url}-->
+                        <!--a(href="#{resultado.url}") -->
+                        +limitaCadena(resultado.url)
+                      td=resultado.author
+                      td=resultado.source
+                      td
+                        a.glyphicon.glyphicon-new-window(href="#{resultado.url}" target="_blank")
+
+              
+            .panel-footer
+              h3 
+              
+              a.button.btn.btn-lg(href="/rest_api/#{rest_apiid}") Volver
+

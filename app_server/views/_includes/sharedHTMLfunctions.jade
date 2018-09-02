@@ -1,0 +1,25 @@
+mixin escribirPuntuacion(puntuacion)
+  - for (i=1;i<=puntuacion;i++)
+    span.glyphicon.glyphicon-star
+  - for (i=puntuacion;i<5;i++)
+    span.glyphicon.glyphicon-star-empty
+  |&nbsp;
+  |&nbsp;
+  - var valoracion = ['Nada valorada', 'Muy poco valorada', 'Poco valorada', 'Valorada', 'Bastante valorada', 'Muy valorada']
+  span.badge.badge-default= valoracion[puntuacion]
+  
+
+mixin formatDate(dateString)
+  -var date = new Date(dateString);
+  -var monthNames = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ];
+  -var d = date.getDate();
+  -var m = monthNames[date.getMonth()];
+  -var y = date.getFullYear();
+  -var output = d + ' ' + m + ' ' + y;
+  =output
+
+mixin limitaCadena(cadena)
+  -var output
+  - if (cadena)
+    - output = cadena.substr(0,40); 
+  =output
